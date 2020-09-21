@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{user.nick_name}}</title>
+</head>
+<body>
+    <h3>修改{{ user.phone}}头像</h3>
+    <p>
+<!--        <img src="/static/{% if user.photo %}{{ user.photo }} {% else %}-->
+<!--        images/default" width="100" height="100">-->
+        <img src="/static/images/default_img.pgn" width="100" height="100">
+    </p>
+    <form method="post" enctype="multipart/form-data">
+        <input name="user_photo" type="file">
+        <button>begin upload photo</button>
+    </form>
+    <p style="">
+        {{msg}}
+    </p>
+</body>
+</html>
